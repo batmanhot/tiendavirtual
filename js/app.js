@@ -285,10 +285,10 @@ function SaveStorageDatosEnvio(){
     var jsonDatos = JSON.stringify(datosenvio);    
 
     let result = window.localStorage.setItem('DatosCliente', jsonDatos);
-  
+    
     PostPedidoCliente(datosenvio)    
     RestoreStorageDatosEnvio();
-    cierremodal(); 
+    cierremodal();    
 }
 
 function RestoreStorageDatosTotal(){         
@@ -306,19 +306,6 @@ function RestoreStorageDatosTotal(){
         
     
     })};
-
-// function RestoreStorageDatosEnvio(){         
-//         let recogeDatos = JSON.parse(localStorage.DatosCliente);        
-
-//         recogeDatos.forEach(dato => {                        
-//             let nombrescliente=dato.nombre+' '+dato.apellidos
-//             let vdireccion = dato.direccion.trim()
-//             let vemail = dato.email.trim()
-            
-//             horario = fechayhoraactual()        
-//             document.getElementById("cliente").innerHTML   =  `<h3>${nombrescliente}</h3>`
-//             document.getElementById("hora").innerHTML      =  `<h3>${horario}</h3>`                
-// })};
 
 function RestoreStorageDatosEnvio(){   
 
