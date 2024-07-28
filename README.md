@@ -1,11 +1,11 @@
-# Proyecto de Tienda Virtual de venta rapida para pequeños negocios.
+# Proyecto de Tienda Virtual de venta rapida para pequeï¿½os negocios.
 
 ## DEFINICION
-Este proyecto está orientado para el uso de pymes y micronegocios o cualquier giro de negocio orientado a la venta de rapida productos por internet, para este caso hemos usado el nombre de "RED BURGUER"“ de dicado a la venta de compida rapida y hamburguesas.
+Este proyecto estï¿½ orientado para el uso de pymes y micronegocios o cualquier giro de negocio orientado a la venta de rapida productos por internet, para este caso hemos usado el nombre de "RED BURGUER"ï¿½ de dicado a la venta de compida rapida y hamburguesas.
 
 ## ALCANCES
 
-El proyecto es escalable y puede seguir creciendo en un modelo más personalizado y complejo, la finalidad es dar una solución rápida y económica durante el proceso de la gestión de las ventas. 
+El proyecto es escalable y puede seguir creciendo en un modelo mï¿½s personalizado y complejo, la finalidad es dar una soluciï¿½n rï¿½pida y econï¿½mica durante el proceso de la gestiï¿½n de las ventas. 
 
 ## FUNCIONALIDAD
 Asimismo, el aplicativo es responsivo y orientado principalmente al uso en equipos moviles, su funcionamiento es sencillo de comprender e intuitivo en el uso.
@@ -41,6 +41,7 @@ Creamos el archivo `.gitignore` y agregamos la carpeta `node_module`, esto sirve
 
 Presentacion en Celular
 
-![Foto1](/assets/app/foto1.png, "Presentacion en Celular primer pantallazo")
+![Foto1]("/assets/app/foto1.png", "Presentacion en Celular primer pantallazo")
 ![Foto2](/assets/app/foto2.png, "Presentacion en Celular segundo pantallazo")
 
+("/..")
