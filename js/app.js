@@ -10,23 +10,12 @@ const vaciarcarrito = document.querySelector('#vaciar-carrito')
 listaItems.addEventListener('click', agregarItem );
 vercarrito.addEventListener('click',carritoFormatoCuadradoHTML);
 vaciarcarrito.addEventListener('click', vaciarCarrito );
-document.addEventListener("DOMContentLoaded", load, false);
 
+document.addEventListener("DOMContentLoaded", load, false);
 
 // --- boton de envio de formulario de contacto actualizad datos personales ---
 const botonenvio = document.querySelector('#boton-envio')
 botonenvio.addEventListener('click',SaveStorageDatosEnvio)
-
-// document.getElementById('cerrarmodal').click()
-
-// const cerrarventanacierre = document.querySelector('#cerrarmodalCierre')
-// cerrarventanacierre.addEventListener('click',cierremodalcierre)
-
-
-// --- ventana de cierre y carga datos en pantalla  ---
-// const ventanacierre = document.querySelector("#body_cierre")
-// ventanacierre.addEventListener('click',cargadatoscierre )
-
 
 
 let articulosCarrito = [];
@@ -40,6 +29,8 @@ function load(){
     muestra = document.querySelector("#contador-items")    
     muestra.style.cssText = 'display: none;'    
     console.log("El carrito se encuentra :  " + (muestra.textContent="( 0 )" ? "Vacio" : "con datos"))    
+// }
+
 }
 
 
@@ -55,7 +46,7 @@ function cierremodalcierre(){
 
 
 function cargadatoscierre(){   
-    RestoreStorageDatosEnvio    
+    // RestoreStorageDatosEnvio()    
 }
 
 // Agrega Item Seleccionado al carrito de compras
@@ -76,12 +67,14 @@ function leerItem(Item){
         Imagen   : Item.querySelector('.card-img > img').src,
         Titulo   : Item.querySelector('.card-texto > h4').textContent,
         Precio   : Item.querySelector('.card-precio >p').textContent,
+        id       : Item.querySelector('.card-img > img').alt,
         Cantidad : 1 
     }
     console.log(InfoItem.Titulo);
     console.log(InfoItem.Precio);
     console.log(InfoItem.Imagen);
     console.log(InfoItem.Cantidad);
+    console.log(InfoItem.id);
 
     // -- se verifica si el producto ya existe 
     const existe = articulosCarrito.some(product => product.Titulo === InfoItem.Titulo)
@@ -127,7 +120,9 @@ function ActualizaCantidadItems(contador) {
 
 function ActualizaResumenItems(totalItems, totalProductos) 
 {         
-    document.getElementById("lista-carrito-resumen-Pedido").innerHTML = `<h4>TOTAL PEDIDO: S/. ${totalProductos.toFixed(2)}</h4>`
+    document.getElementById("lista-carrito-resumen-Pedido").innerHTML = `<h4>TOTAL PEDIDO: S/. ${totalProductos.toFixed(2)}</h4>`;
+    document.getElementById('total').value = totalProductos.toFixed(2);
+    document.getElementById('cantidaditems').value = totalItems;   
 
     // --- Verificando si los datos del contacto se habilitan         
 
@@ -140,37 +135,6 @@ function ActualizaResumenItems(totalItems, totalProductos)
     }            
 
 }
-
-// function carritoHTML() {
-
-//     let TotalProductos = 0;   
-//     let TotalItems     = 0;   
-//     let rowx = ""
-
-//     document.getElementById("lista-carrito-cuerpo").innerHTML = ""            
-
-//     articulosCarrito.forEach(product => {        
-//         let rowx = document.createElement('tr');
-//         rowx.innerHTML = `
-//         <td><img src="${product.Imagen}" width=70></td>
-//          <td>${product.Titulo}</td>
-//          <td>${product.Cantidad} </td>
-//          <td>${product.Precio}</td>
-//          <td>${(product.Cantidad * product.Precio).toFixed(2)}</td>
-//          <td><a href="#" id="editar-carrito" class="button-carrito"><i class="fa-solid fa-pen-to-square"></i></a></td>
-//          <td><a href="#" id="eliminar-carrito" class="button-carrito" onClick ="eliminarItemCarritoHTML(event, '${product.Titulo}')">     <i class="fa-solid fa-trash"></i> </a> </td>
-//          `;                 
-//         TotalProductos = TotalProductos + (product.Cantidad * product.Precio);
-//         TotalItems = TotalItems + 1;
-
-//         contenedorCarrito.appendChild(rowx); 
-
-//     });
-    
-//     ActualizaResumenItems(TotalItems, TotalProductos)    
-//     SaveStorageDatosCompra()
-// };
-
 
 function carritoFormatoCuadradoHTML() {
 
@@ -253,7 +217,7 @@ function fechayhoraactual(){
     return horario;
 }
 
-function SaveStorageDatosTotal(vtotal,vtotalitems){      
+function SaveStorageDatosTotal(vtotal,vtotalitems, items){      
 
     vfechayhora = fechayhoraactual()
 
@@ -265,6 +229,7 @@ function SaveStorageDatosTotal(vtotal,vtotalitems){
 
     var jsonDatos = JSON.stringify(TotalPedido);
     let result = window.localStorage.setItem('TotalPedido', jsonDatos);
+    
 }         
 
 function SaveStorageDatosCompra(){            
@@ -287,7 +252,7 @@ function SaveStorageDatosCompra(){
     });
 
     var jsonDatos = JSON.stringify(articulosCarrito);
-    // let resultado = window.localStorage.setItem('DatosCompra', jsonDatos);
+    var result = window.localStorage.setItem('ItemsVenta', jsonDatos);
 
     SaveStorageDatosTotal(nTotalProductos,nTotalItems)
 };
@@ -300,29 +265,30 @@ function SaveStorageDatosEnvio(){
     const vphone =  document.querySelector("#phone").value;
     const vreferencia =  document.querySelector("#referencia").value;
     const vemail =  document.querySelector("#email").value;
+    const vtotal =  document.querySelector("#total").value;
+    const vcantidad =  document.querySelector("#cantidaditems").value;
+    let now = new Date()    
+    datosenvio =
+        {        
+            "nombres": vnombres.trim(),
+            "apellido": vapellidos.trim(),
+            "direccion":vdireccion.trim(),
+            "phone":vphone.trim(),
+            "referencia":vreferencia.trim(),
+            "email":vemail.trim(),
+            "totalPedido": parseFloat(vtotal),
+            "fechaHora": now,
+            "totalItems":parseInt(vcantidad),
+            "pedidoatendido": false
+        }
 
-    datosenvio=[{
-        "nombre": vnombres,
-        "apellidos": vapellidos,
-        "direccion":vdireccion,
-        "phone ":vphone,
-        "referencia ":vreferencia,
-        "email":vemail
-    }]
-    console.log("Nombres", vnombres)
-    console.log("Apellidos", vapellidos)
-    console.log("Direccion", vdireccion)
-    console.log("Phone", vphone)    
-
-    var jsonDatos = JSON.stringify(datosenvio);
+    var jsonDatos = JSON.stringify(datosenvio);    
 
     let result = window.localStorage.setItem('DatosCliente', jsonDatos);
-    // let recoge = JSON.parse(window.localStorage.getItem('DatosCliente'));    
-
-    cierremodal();
-
-    // RestoreStorageDatosEnvio();
-    
+  
+    PostPedidoCliente(datosenvio)    
+    RestoreStorageDatosEnvio();
+    cierremodal(); 
 }
 
 function RestoreStorageDatosTotal(){         
@@ -341,28 +307,30 @@ function RestoreStorageDatosTotal(){
     
     })};
 
-    
-// function RestoreStorageDatosEnvio(){     
-//     debugger    
-//     let recogeDatos = JSON.parse(localStorage.DatosCliente);
+// function RestoreStorageDatosEnvio(){         
+//         let recogeDatos = JSON.parse(localStorage.DatosCliente);        
 
-//     console.log(recogeDatos)
+//         recogeDatos.forEach(dato => {                        
+//             let nombrescliente=dato.nombre+' '+dato.apellidos
+//             let vdireccion = dato.direccion.trim()
+//             let vemail = dato.email.trim()
+            
+//             horario = fechayhoraactual()        
+//             document.getElementById("cliente").innerHTML   =  `<h3>${nombrescliente}</h3>`
+//             document.getElementById("hora").innerHTML      =  `<h3>${horario}</h3>`                
+// })};
 
-//     recogeDatos.forEach(dato => {                        
-//         console.log(dato.nombre);
-//         console.log(dato.apellidos);
-//         console.log(dato.email);
-//         console.log(dato.direccion);
+function RestoreStorageDatosEnvio(){   
 
-//         let nombrescliente=dato.nombre+' '+dato.apellidos
+    let datosEnvioaMostrar = JSON.parse(localStorage.DatosCliente);
 
-//         console.log(nombrescliente)
-        
-//         horario = fechayhoraactual()
+    const cliente = document.querySelector('.cliente')
+    const direccion = document.querySelector('.directo')
+    const hora = document.querySelector('.hora');
+    const mail = document.querySelector('.mail');
 
-//         document.getElementById("cliente").innerHTML =  `<h4>${nombrescliente}</h4>`
-//         document.getElementById("direccion").innerHTML = `<h4>${dato.direccion}</h4>`
-//         document.getElementById("email").innerHTML =   `<h4>${dato.email}</h4>`        
-//         document.getElementById("hora").innerHTML =   `<h4>${horario}</h4>`        
-    
-//     })}
+    // cliente.innerHTML     =  `<p>${datosEnvioaMostrar.nombres+' '+datosEnvioaMostrar.apellido}</p>`
+    // direccion.innerHTML   =  `<p>${datosEnvioaMostrar.direccion}</p>`
+    // hora.innerHTML        =  `<p>${datosEnvioaMostrar.fechaHora}</p>`
+    // mail.innerHTML        =  `<p>${datosEnvioaMostrar.email}</p>`    
+};

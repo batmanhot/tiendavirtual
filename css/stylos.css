@@ -4,6 +4,26 @@
     /* box-sizing: border-box;   */
 }
 
+/*Flecha para hacer la pagina hacia arriba*/
+.ir-arriba{
+    display:none;
+    background-repeat:no-repeat;
+    font-size:20px;
+    color:black;
+    cursor:pointer;
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    z-index:2;
+  }
+
+.iconocarrito:hover{
+    box-shadow: 0px 0px 15px 15px #ec731e;
+    transform:scale(1.5);transform:scale(1.5);      
+    transition: width 1s ease-in-out;
+}  
+
+
 /* ----- body ------- */
 body {
 	background: #E9ECF4;
@@ -203,16 +223,17 @@ body {
     left: 25%; 
     
     z-index: 9000;
-    width: 50%;
+    width: 30%;
     height: 50%;
     border: 2px solid; 
     background: white;    
 }    
 .vercarrito {
     display: block;
-    position: relative;
-    padding: 20px 0 0 0;    
-    text-align: center;  
+    position: relative;  
+    padding: 10% 0 0 0;    
+    /* padding: 20px;    */
+    text-align: center;   
 }
 
 #lista-carrito{
@@ -227,7 +248,7 @@ body {
     justify-content:center;
 }
 
-
+/* 
 table, th, td {
     border: 1px solid;        
 }
@@ -237,10 +258,10 @@ th {
     padding-bottom: 12px;
     background-color: maroon;
     color: white;
-}
+} */
 
 /* -- dando tamaño a las columnas del body del carrito */
-th:nth-child(1) {    
+/* th:nth-child(1) {    
     width: 10%    
 }
 th:nth-child(2) {    
@@ -259,7 +280,7 @@ th:nth-child(6) {
     width: 5%    
 }th:nth-child(7) {    
     width: 5%    
-}
+} */
 
 .card-compras-botonvercarrito{
     width: 120%;
@@ -292,8 +313,8 @@ th:nth-child(6) {
 	background: rgba(0,0,0,0.8);
 	z-index: 99999;
 	opacity:0;
-	-webkit-transition: opacity 400ms ease-in;
-	-moz-transition: opacity 400ms ease-in; 
+	/* -webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;  */
 	transition: opacity 400ms ease-in;
 	pointer-events: none;
 }
@@ -302,19 +323,16 @@ th:nth-child(6) {
 	pointer-events: auto;
 }
 .modalDialog > div {
-	width: 70%;
+	width: 80%; 
 	position: relative;
-	margin: 10% auto;
-	padding: 5px 20px 13px 20px;
-	border-radius: 10px;
-
-	background: #fff;
-	background: -moz-linear-gradient(#fff, #999);
+	margin: 5% auto;    
+	/* padding: 15px 20px 13px 20px;          */
+    padding: 20px 20px 20px 20px;         
+	border-radius: 10px;    	 
+    background: -moz-linear-gradient(#fff, #999);
 	background: -webkit-linear-gradient(#fff, #999);
-	background: -o-linear-gradient(#fff, #999);
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
+	background: -o-linear-gradient(#fff, #999);     
+    transition: opacity 400ms ease-in; 
 }
 .close {
 	background: #606061;
@@ -335,6 +353,9 @@ th:nth-child(6) {
 	box-shadow: 1px 1px 3px #000;
 }
 .close:hover { background: #00d9ff; }
+
+
+
 /* ---------- FIN DE VENTANA MODAL  -------------------------*/
 
 .lista-carrito-botones{
@@ -385,14 +406,16 @@ th:nth-child(6) {
 }
 
 #carta-img{
-    width: 40%;
-    height: 40% ;
+    width: 30%;
+    height: 3   0% ;
     text-align: center;
 }
 
 #pedido{
     display: flex;    
     justify-content: center;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;    
 }
 
 #mensaje {
@@ -400,7 +423,10 @@ th:nth-child(6) {
     align-items: center;
     flex-direction: column; 
     justify-content: center;
-    padding: 20px;
+    font-size: 12px;
+    padding: 10px; 
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 
 }
 
@@ -408,52 +434,46 @@ th:nth-child(6) {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    font-style: italic;
+    color:white ;
+    text-shadow: #000 0.1em 0.1em 0.2em
 }
 
 
-#cuerpo{
-    border-width: 4px;    
-    background-color: burlywood;
-    box-shadow: 14px 10px 5px 0px rgba(0,0,0,0.75);
-
+#cuerpo{    
+    border: #000;
+    border-radius: 10px;  
+    background-color: burlywood;    
+    border-style: double;
+    border-width: 5px;    
 }
 
 #confirmacion{
     text-align: center;
     margin-top: 20px;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
 
-#body_cierre{
-    /* height: 50vh; */
-    padding: 10px;
-     display: flex; 
+#body_cierre{    
+    display: flex; 
     flex-direction: column; 
     align-items: center; 
-    justify-content: center;     
+    justify-content: center;         
 } 
 
 
 #cuerpo_modal{
-    background-image: url("../assets/img/fondo_restaurante.png");
+    background-image: url("../assets/img/fondo_restaurante.png"); 
     opacity: 90%;
     display: flex;
     flex-direction: column;
-    
     justify-content: center;          
     width: 50%;
     padding: 20px;
 } 
-
-
-/* #lista-carrito-cuerpo{
-    border-style: solid;    
-} */
-
-/* .lista-carrito-div{
-    border-style:solid;
-    border-width: 3px;
-    border-color: #fff;
-} */
 
 #lista-carrito-cuerpo-horizontal{
    display: flex;        
@@ -483,7 +503,7 @@ th:nth-child(6) {
  form {
     width: 270px;
     margin: auto;     
-  }
+  } 
 
   input[type=text], input[type=tel], input[type=email] {   
     width: 81%;
@@ -501,10 +521,6 @@ th:nth-child(6) {
     cursor: pointer;
     width: 100%}
 
-
-/* .contacto{
-    display: none;
-} */
 
 /* ---- DESKTOP  */
 @media (min-width: 1280px) {
@@ -540,6 +556,14 @@ th:nth-child(6) {
     }
 
     .modalDialog > div {
-        width: 30%;
+        width: 20%;
+    }
+
+    #confirmacion, #pedido{
+        font-size: 30px;        
+        color: white;
+    }
+    #mensaje{
+        font-size: 20px
     }
 } 
