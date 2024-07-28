@@ -204,15 +204,7 @@ async function PostPedidoCliente(datosenvio){
 
 async function PostPedidoItems(datosenvio){
     let datosenviados = datosenvio
-    
-    //     let datosenviados = 
-    //     {
-    //         "cantidad": 4,
-    //         "precio": 18.0,
-    //         "total": 33.0,    
-    //         "productoId": 10,
-    //         "datosPedidoId": 9    
-    //    }     
+   
 
      opciones = {
             method:"POST",
