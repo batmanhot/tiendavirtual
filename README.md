@@ -41,7 +41,6 @@ Creamos el archivo `.gitignore` y agregamos la carpeta `node_module`, esto sirve
 
 Presentacion en Celular
 
-![Foto1]("/assets/app/foto1.png")
-![Foto2](/assets/app/foto2.png)
+![Foto1](\assets\app\foto1.png)
+![Foto2](\assets\app\foto2.png)
 
-("/..")
