@@ -9,6 +9,7 @@ El proyecto es escalable y puede seguir creciendo en un modelo más personalizado
 
 ## FUNCIONALIDAD
 Asimismo, el aplicativo es responsivo y orientado principalmente al uso en equipos moviles, su funcionamiento es sencillo de comprender e intuitivo en el uso.
+Para su uso y descarga es necesario indicar que este aplicativo, funciona estando activo el server de backend de PYTHON-DJANGO, el cual es el que conecta a la base de datos.
 
 ## STACK
 Para este proyecto hemos utilizado lo siguiente .
@@ -30,9 +31,17 @@ Para este proyecto hemos utilizado lo siguiente .
 -SWAGGER
 ```
 
+## STACK
+Para este proyecto hemos utilizado lo siguiente .
+
+
 Creamos el archivo `.gitignore` y agregamos la carpeta `node_module`, esto sirve para evitar que dicha carpeta se suba a `github`, debido a que esta carpeta es muy pesada.
 
 ## IMAGENES DE LA APLICACION
+
+!"/assets/app/foto1.png"
+!/assets/app/foto1.png
+
 
 [(/assets/app/foto1.png "Presentacion en Celular")]
 [(/assets/app/foto2.png "Presentacion en Celular")]
