@@ -39,8 +39,10 @@ Creamos el archivo `.gitignore` y agregamos la carpeta `node_module`, esto sirve
 
 ## IMAGENES DE LA APLICACION
 
-!"/assets/app/foto1.png"
-!/assets/app/foto1.png
+Presentacion en Celular
+
+![""](/assets/app/foto1.png)
+![""](/assets/app/foto2.png)
 
 
 [(/assets/app/foto1.png "Presentacion en Celular")]
