@@ -40,7 +40,7 @@ Creamos el archivo `.gitignore` y agregamos la carpeta `node_module`, esto sirve
 ## IMAGENES DE LA APLICACION
 
 
-
+![Imagen de Ceular](https://github.com/batmanhot/tiendavirtual/blob/main/assets/app/Foto1.png)
 
 <img widh='154' alt='foto1' src='https://github.com/batmanhot/tiendavirtual/blob/main/assets/app/Foto1.png'>
 <img widh='154' alt='foto1' src='https://github.com/batmanhot/tiendavirtual/blob/main/assets/app/Foto2.png'>
