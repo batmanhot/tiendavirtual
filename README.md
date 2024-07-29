@@ -35,12 +35,8 @@ Para este proyecto hemos utilizado lo siguiente .
 ## IMAGENES DE LA APLICACION
 
 
-<<<<<<< HEAD
 ![Imagen de Celular](https://github.com/batmanhot/tiendavirtual/blob/main/assets/app/Foto1.png)  , ![Imagen de Ceular](https://github.com/batmanhot/tiendavirtual/blob/main/assets/app/Foto2.png), ![Imagen de Ceular](https://github.com/batmanhot/tiendavirtual/blob/main/assets/app/Foto3.png), 
-=======
-![Imagen de Celular](https://github.com/batmanhot/tiendavirtual/blob/main/assets/app/Foto1.png)  , ![Imagen de Ceular](https://github.com/batmanhot/tiendavirtual/blob/main/assets/app/Foto2.png) , ![Imagen de Ceular](https://github.com/batmanhot/tiendavirtual/blob/main/assets/app/Foto3.png)
-<img widh='154' alt='foto1' src='https://github.com/batmanhot/tiendavirtual/blob/main/assets/app/Foto4.png'>
+![Imagen de Celular](https://github.com/batmanhot/tiendavirtual/blob/main/assets/app/Foto4.png)  , ![Imagen de Ceular](https://github.com/batmanhot/tiendavirtual/blob/main/assets/app/Foto5.png) , ![Imagen de Ceular](https://github.com/batmanhot/tiendavirtual/blob/main/assets/app/Foto6.png)
 
->>>>>>> 3f112fa4a12cd2f813b01b8b983736fbd13fadc4
 
 
