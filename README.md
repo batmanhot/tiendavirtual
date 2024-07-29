@@ -32,12 +32,6 @@ Para este proyecto hemos utilizado lo siguiente .
 -SWAGGER
 ```
 
-## STACK
-Para este proyecto hemos utilizado lo siguiente .
-
-
-Creamos el archivo `.gitignore` y agregamos la carpeta `node_module`, esto sirve para evitar que dicha carpeta se suba a `github`, debido a que esta carpeta es muy pesada.
-
 ## IMAGENES DE LA APLICACION
 
 
