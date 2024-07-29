@@ -39,12 +39,13 @@ Creamos el archivo `.gitignore` y agregamos la carpeta `node_module`, esto sirve
 
 ## IMAGENES DE LA APLICACION
 
-Presentacion en Celular
-<<<<<<< HEAD
-[![Foto 1](/assets/app/foto1.png "Shiprock, New Mexico by Beau Rogers")]
-=======
 
-![Foto1](\assets\app\foto1.png)
-![Foto2](\assets\app\foto2.png)
 
->>>>>>> 36b36861221f70802e30fa423646bc319802c324
+
+https://github.com/batmanhot/tiendavirtual/blob/main/assets/app/Foto1.png
+https://github.com/batmanhot/tiendavirtual/blob/main/assets/app/Foto2.png
+https://github.com/batmanhot/tiendavirtual/blob/main/assets/app/Foto3.png
+https://github.com/batmanhot/tiendavirtual/blob/main/assets/app/Foto4.png
+
+
+
