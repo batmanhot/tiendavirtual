@@ -1,4 +1,5 @@
-# Proyecto de Tienda Virtual de venta rapida para peque�os negocios.
+# Proyecto de Tienda Virtual de venta rapida para peque�os negocios. 
+# MODULO FRONTEND
 
 ## DEFINICION
 Este proyecto est� orientado para el uso de pymes y micronegocios o cualquier giro de negocio orientado a la venta de rapida productos por internet, para este caso hemos usado el nombre de "RED BURGUER"� de dicado a la venta de compida rapida y hamburguesas.
