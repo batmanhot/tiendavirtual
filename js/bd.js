@@ -115,11 +115,18 @@ function ActualizaInformacionNegocio(bdNegocio)
 
 // ---------------------------------------------------------------------------------------------------------------------
 // API - Productos
-const API_URL_PRODUCTOS   = 'http://127.0.0.1:8000/api/v1/Producto/'
-const API_URL_INFONEGOCIO = 'http://localhost:8000/api/v1/InfoNegocio/'
-const API_URL_DATOSPEDIDO = 'http://localhost:8000/api/v1/DatosPedido/'
-const API_URL_PEDIDOITEMS = 'http://localhost:8000/api/v1/ItemsPedido/'
-const API_URL_BUSCARPROD  = 'http://127.0.0.1:8000/api/v1/Producto/1/'
+// const API_URL_PRODUCTOS   = 'http://localhost:8000/api/v1/Producto/'
+// const API_URL_INFONEGOCIO = 'http://localhost:8000/api/v1/InfoNegocio/'
+// const API_URL_DATOSPEDIDO = 'http://localhost:8000/api/v1/DatosPedido/'
+// const API_URL_PEDIDOITEMS = 'http://localhost:8000/api/v1/ItemsPedido/'
+// const API_URL_BUSCARPROD  = 'http://localhost:8000/api/v1/Producto/1/'
+
+const API_URL_PRODUCTOS   = 'https://tiendavirtual-backend.onrender.com/api/v1/Producto/'
+const API_URL_INFONEGOCIO = 'https://tiendavirtual-backend.onrender.com/api/v1/InfoNegocio/'
+const API_URL_DATOSPEDIDO = 'https://tiendavirtual-backend.onrender.com/api/v1/DatosPedido/'
+const API_URL_PEDIDOITEMS = 'https://tiendavirtual-backend.onrender.com/api/v1/ItemsPedido/'
+const API_URL_BUSCARPROD  = 'https://tiendavirtual-backend.onrender.com/api/v1/Producto/1/'
+
 
 async function GetProductos(){
      try {
